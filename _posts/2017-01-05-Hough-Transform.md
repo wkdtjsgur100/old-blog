@@ -86,7 +86,6 @@ m,b를 누적하고 사용한다는 의미는 뭘까. 우리가 평면에 직선
 
 r = x*cost + y*sint
 
-
 ![허프 공간](https://www.harrisgeospatial.com/docs/html/images/hough02.gif)
 
 위 그림에서 theta가 t이다.
