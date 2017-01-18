@@ -22,8 +22,8 @@ pytest==3.0.5
 selenium==2.53.6
 ```
 3) 일단 로컬에서 testing이 잘 되는지 확인하기 위해 아래와 같은 파일을 추가한다.
-```python
-  # selenium-browser.py
+``` Python3
+  #selenium-browser.py
   from selenium import webdriver
 
   def test_selenium():
