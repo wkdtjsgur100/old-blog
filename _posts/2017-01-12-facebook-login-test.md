@@ -22,6 +22,7 @@ pytest==3.0.5
 selenium==2.53.6
 ```
 3) 일단 로컬에서 testing이 잘 되는지 확인하기 위해 아래와 같은 파일을 추가한다.
+
 ``` Python3
   #selenium-browser.py
   from selenium import webdriver
@@ -34,6 +35,7 @@ selenium==2.53.6
 
       driver.close()
 ```
+
 http://localhost:8000 을 돌리기 위해, ```python -m http.server 8000 &```
 을 실행한 후,
 위 소스를 넣고 pytest selenium-browser.py를 해보면, 테스팅이 잘 되는 것을 알 수 있다.
