@@ -106,7 +106,7 @@ pytest --maxfail=2    # 두 번째 실패 시 중지
 
 ## 테스트 선택 / 지정
 
-```
+``` text
 pytest test_mod.py   # 모듈 내 테스트 실행
 pytest somepath      # 특정 경로 아래 모든 테스트 수행
 pytest -k stringexpr # 특정 "문자열 표현"과 이름이 매칭되는 테스트만 실행  
@@ -140,16 +140,16 @@ pytest --tb=no      # trackback 없음
 ## Dropping to [PDB(Python Debugger)](https://docs.python.org/3/library/pdb.html) on failures
 
 pytest는 아래와 같이 커맨드 라인 옵션을 통해 PDB 에 드롭할 수 있습니다.
-```
+``` text
 pytest --pdb
 ```
 이는 모든 실패 시 마다 파이썬 debugger를 호출합니다. 종종 특정 실패 시 에만 호출하길 원할 경우엔 아래와 같이 한다.
-```
+``` text
 pytest -x --pdb   # 첫번째 실패를 PDB에 드롭하고, 테스트 세션을 종료한다.
 pytest --pdb --maxfail=3  # 처음 세 번의 실패를 PDB에 드롭한다.
 ```
 모든 실패 시엔 예외정보는 sys.last_value, sys.last_type, sys.last_traceback에 저장됩니다. interactive로 사용하면 디버그 도구로 사후 디버깅을 할 수 있습니다. 이것은 또한 예외 정보에 수동적으로 접근 할 수 있습니다. 예를 들면,
-```
+``` text 
 >>> import sys
 >>> sys.last_traceback.tb_lineno
 42
