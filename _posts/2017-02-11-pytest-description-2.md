@@ -9,12 +9,14 @@ tags: [ 'pytest', 'tdd','python','test' ]
 # Setting a breakpoint / aka set_trace()
 
 breakpoint를 설정하고 ```pdb.set_trace()```를 입력하려면 helper를 사용할 수 있습니다.
+
 ``` python
 import pytest
 def test_function():
   ...
   pytest.set_trace()  # invoke PDB debugger and tracing
 ```
+
 pytest 버전 2.0.0 이전에 ```pytest -s``` 명령어로 캡처하는 것을 비활성화 시키면 PDB tracing을 입력 할 수 있었지만, 그 이후의 버전은 pytest가 자동적으로 비활성화 시켜준다.
 
 * 다른 테스트들의 출력 캡처는 영향을 미치지 않는다.
