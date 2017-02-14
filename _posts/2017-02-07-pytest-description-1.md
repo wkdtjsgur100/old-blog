@@ -70,6 +70,7 @@ $ pytest -q test_sysexit.py
 Functional 테스트의 경우 몇몇 파일을 만들어서 어플리케이션에 넘겨야 할 수 있습니다. 인자를 넘기면 pytest는 fixture factory를 찾아서 테스트 함수 호출을 진행하기 전에 resource 제작을 하도록 합니다.
 
 예를 들어 아래와 같은 파이썬 파일을 만든다하면
+
 ``` python
 # content of test_tmpdir.py
 def test_needsfiles(tmpdir):
@@ -81,7 +82,7 @@ def test_needsfiles(tmpdir):
 에 나와 있습니다.
 
 pytest --fixtures를 치면, [pytest의
-ixture들](http://doc.pytest.org/en/latest/fixture.html#fixtures) 을 확인 할 수 있습니다
+fixture들](http://doc.pytest.org/en/latest/fixture.html#fixtures) 을 확인 할 수 있습니다
 
 
 # Usage and Invocations
@@ -149,7 +150,7 @@ pytest -x --pdb   # 첫번째 실패를 PDB에 드롭하고, 테스트 세션을
 pytest --pdb --maxfail=3  # 처음 세 번의 실패를 PDB에 드롭한다.
 ```
 모든 실패 시엔 예외정보는 sys.last_value, sys.last_type, sys.last_traceback에 저장됩니다. interactive로 사용하면 디버그 도구로 사후 디버깅을 할 수 있습니다. 이것은 또한 예외 정보에 수동적으로 접근 할 수 있습니다. 예를 들면,
-``` text 
+``` text
 >>> import sys
 >>> sys.last_traceback.tb_lineno
 42
