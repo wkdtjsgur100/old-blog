@@ -86,11 +86,14 @@ def favorite_color(color):
     return decorator
 ```
 
-그러면 black_knight 함수가 실행되기 전에 "Blue" 같은 black_knight 함수가 출력되는 것을 decorate 합니다. [Closure](https://en.wikipedia.org/wiki/Closure_(computer_programming))는 color 매개변수가 가장 안에있는 wrapper 함수에 접근 가능하게 하는데, 심지어 이 함수가 종료되고 작동하는 데코레이터를 허용하는 스코프를 벗어나도 접근 가능하다.  
+그러면 black_knight 함수가 실행되기 전에 "Blue" 같은 black_knight 함수가 출력되는 것을 decorate 합니다. [Closure](https://en.wikipedia.org/wiki/Closure_(computer_programming))는 color 매개변수가 가장 안에있는 wrapper 함수에 접근 가능하게 하는데, 심지어 이 함수가 종료되고 작동하는 데코레이터를 허용하는 스코프를 벗어나도 접근 가능합니다.
 
-파이썬 version 2.6 이전엔, 데코레이터는 함수와 메서드에 요청했지만, 클래스에는 아니었다.   
-하지만 ```__new__``` 메소드를 데코레이팅 하는 것은 클래스를 수정할 수 있다.  
-클래스 데코레이터들은 버전 2.6에서부터 지원된다.  
+파이썬 version 2.6 이전엔, 데코레이터는 함수와 메서드에 요청했지만, 클래스에는 아니었습니다.   
+하지만 ```__new__``` 메소드를 데코레이팅 하는 것은 클래스를 수정할 수 있습니다.  
+클래스 데코레이터들은 버전 2.6에서부터 지원됩니다.  
 
-이름이 이렇지만, python decorator는 decorator 패턴이 구현(implementation) 된 것은 아니다.  
-decorator 패턴은 실행 도중에 객체들이 추가 되는 기능을 하게 해주는 객체지향 프로그래밍에서 정형화된 패턴 타입으로 사용되는 디자인 패턴이다; Python decorator는 함수와 메서드가 definition time에 기능을 더해준다. 그러므로 decorator 패턴 클래스들 보다 더 높은 레벨의 구조라고 볼 수 있다. 데코레이터 패턴은 언어가 duck typed이기 때문에, 파이썬에서 구현 가능한 사소한 것들이다. 그래서 데코레이터 패턴은 이와 같이 주로 같은 수준으로 판단되지 않는다.
+이름이 이렇지만, python decorator는 decorator 패턴이 구현(implementation) 된 것은 아닙니다.  
+decorator 패턴은 실행 도중에 객체들이 추가 되는 기능을 하게 해주는 객체지향 프로그래밍에서 정형화된 패턴 타입으로 사용되는 디자인 패턴입니다; Python decorator는 함수와 메서드가 definition time에 기능을 더해줍니다.  
+그러므로 decorator 패턴 클래스들 보다 더 높은 레벨의 구조라고 볼 수 있습니다.  
+데코레이터 패턴은 언어가 duck typed이기 때문에, 파이썬에서 구현 가능한 사소한 것들입니다.  
+그래서 데코레이터 패턴은 이와 같이 주로 같은 수준으로 판단되지 않습니다.
